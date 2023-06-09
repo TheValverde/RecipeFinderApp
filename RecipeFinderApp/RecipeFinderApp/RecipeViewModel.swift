@@ -10,6 +10,10 @@ import Combine
 
 class RecipeViewModel: ObservableObject {
     @Published var userIngredients: [Ingredient] = []
+    @Published var activeView: ActiveView = .home
+    
+    enum ActiveView { case home, myPantry, recipes, addRecipe, detailedView }
+
     let recipes: [Recipe] = [
         Recipe(name: "Pasta", ingredients:
                 [Ingredient(name: "Pasta", quantity: 2, unit: "Cups"),
@@ -33,7 +37,7 @@ class RecipeViewModel: ObservableObject {
                  Ingredient(name: "MSG", quantity: 1, unit: "Dash"),
                  Ingredient(name: "Salt", quantity: 1, unit: "Teaspoons")],
                difficulty: "Easy"),
-        Recipe(name: "Debug", ingredients:
+        Recipe(name: "Debug but I want to make the name really long", ingredients:
                 [Ingredient(name: "Debug", quantity: 1, unit: "Debug")],
                difficulty: "Debug")
     ]

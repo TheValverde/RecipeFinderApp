@@ -1,17 +1,17 @@
 //
-//  ContentView.swift
+//  HomeView.swift
 //  RecipeFinderApp
 //
-//  Created by Hugo Valverde on 6/8/23.
+//  Created by Hugo Valverde on 6/9/23.
 //
 
 import SwiftUI
 
-struct ContentView: View {
-    let viewModel = RecipeViewModel()
+struct HomeView: View {
+    @EnvironmentObject var viewModel: RecipeViewModel
     
     var body: some View {
-        NavigationView{
+        NavigationView {
             ZStack {
                 BackgroundView()
                 VStack {
@@ -19,20 +19,17 @@ struct ContentView: View {
                         .fontWeight(.bold)
                         .font(.system(size:50))
                         .padding(.bottom, 10)
-
                     IngredientInputView().environmentObject(viewModel)
                     Divider()
-
-                    HomeBottomNav().environmentObject(viewModel)
+                    RecipeListView().environmentObject(viewModel)
                 }.padding(.top, 20)
             }
         }
     }
 }
 
-
-struct ContentView_Previews: PreviewProvider {
+struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        HomeView()
     }
 }

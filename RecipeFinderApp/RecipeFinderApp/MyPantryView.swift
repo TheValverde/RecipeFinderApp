@@ -11,7 +11,6 @@ struct MyPantryView: View {
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .padding(.top)
-
                 
                 ScrollView {
                     VStack(spacing: 20) {
@@ -34,6 +33,9 @@ struct MyPantryView: View {
                     .padding(.horizontal)
                 }
             }
+        }
+        .onAppear {
+            viewModel.activeView = .myPantry
         }
     }
 }

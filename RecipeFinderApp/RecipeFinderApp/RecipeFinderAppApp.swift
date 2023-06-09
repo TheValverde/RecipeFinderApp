@@ -13,7 +13,7 @@ struct RecipeFinderAppApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
                 .environmentObject(viewModel)
         }
     }

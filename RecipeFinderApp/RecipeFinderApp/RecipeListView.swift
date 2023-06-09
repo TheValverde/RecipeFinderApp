@@ -16,7 +16,10 @@ struct RecipeListView: View {
                 ForEach(viewModel.recipes) { recipe in
                     let requiredIngredients = recipe.ingredients
                     if hasEnoughIngredients(userIngredients: viewModel.userIngredients, requiredIngredients: requiredIngredients) {
-                        Text(recipe.name)
+                        RecipeListItemView(
+                            name:recipe.name,
+                            difficulty: recipe.difficulty,
+                            destination: AnyView(DetailedRecipeView(recipe: recipe))).environmentObject(viewModel)
                     }
                 }
             }
