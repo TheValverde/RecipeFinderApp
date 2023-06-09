@@ -11,15 +11,18 @@ struct RecipeListView: View {
     @EnvironmentObject var viewModel: RecipeViewModel
 
     var body: some View {
-        List {
-            ForEach(viewModel.recipes) { recipe in
-                let requiredIngredients = recipe.ingredients
-                if hasEnoughIngredients(userIngredients: viewModel.userIngredients, requiredIngredients: requiredIngredients) {
-                    Text(recipe.name)
+        ScrollView {
+            VStack {
+                ForEach(viewModel.recipes) { recipe in
+                    let requiredIngredients = recipe.ingredients
+                    if hasEnoughIngredients(userIngredients: viewModel.userIngredients, requiredIngredients: requiredIngredients) {
+                        Text(recipe.name)
+                    }
                 }
             }
         }
     }
+
 
     // This function checks if the user has enough of each ingredient required for a recipe.
     func hasEnoughIngredients(userIngredients: [Ingredient], requiredIngredients: [Ingredient]) -> Bool {
