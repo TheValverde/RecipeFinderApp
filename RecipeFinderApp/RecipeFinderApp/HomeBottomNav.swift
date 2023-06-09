@@ -8,13 +8,17 @@
 import SwiftUI
 
 struct HomeBottomNav: View {
+    @EnvironmentObject var viewModel: RecipeViewModel
+    
     var body: some View {
         VStack {
             Spacer()
             ZStack {
                 BottomBackgroundView()
                 HStack(spacing: 20){
-                    BottomButtonView(btnName: "My Pantry", imgName: "takeoutbag.and.cup.and.straw.fill", destination: AnyView(RecipesView()))
+                    BottomButtonView(btnName: "My Pantry", imgName: "takeoutbag.and.cup.and.straw.fill", destination: AnyView(MyPantryView().environmentObject(viewModel)
+                        //.environmentObject(RecipeViewModel())
+                    ))
                     BottomButtonView(btnName: "Recipes", imgName: "fork.knife", destination: AnyView(RecipesView()))
                     BottomButtonView(btnName: "Add Recipe", imgName: "plus", destination: AnyView(AddRecipeView()))
                 }
@@ -57,6 +61,6 @@ struct BottomButtonView: View {
 
 struct HomeBottomNav_Previews: PreviewProvider {
     static var previews: some View {
-        HomeBottomNav()
+        HomeBottomNav().environmentObject(RecipeViewModel())
     }
 }

@@ -24,7 +24,7 @@ struct ContentView: View {
                         .padding(.bottom, 10)
                     IngredientInputView().environmentObject(viewModel)
                     RecipeListView().environmentObject(viewModel)
-                    HomeBottomNav()
+                    HomeBottomNav().environmentObject(viewModel)
                     
                 }.padding(.top, 20)
             }
@@ -32,17 +32,7 @@ struct ContentView: View {
     }
 }
 
-struct BackgroundView : View{
-    var body: some View {
-        LinearGradient(
-            gradient: Gradient(colors: [Color.blue, Color.pink, Color.yellow]),
-            startPoint: .topLeading,
-            endPoint: .bottomTrailing
-        )
-        .edgesIgnoringSafeArea(.all)
 
-    }
-}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

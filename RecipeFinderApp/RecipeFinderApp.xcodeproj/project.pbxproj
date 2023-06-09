@@ -20,6 +20,7 @@
 		89D0FB272A32F86600D8CBCE /* MyPantryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D0FB262A32F86600D8CBCE /* MyPantryView.swift */; };
 		89D0FB292A32F87E00D8CBCE /* RecipesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D0FB282A32F87E00D8CBCE /* RecipesView.swift */; };
 		89D0FB2B2A32F88600D8CBCE /* AddRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D0FB2A2A32F88600D8CBCE /* AddRecipeView.swift */; };
+		89D0FB302A3301D900D8CBCE /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D0FB2F2A3301D900D8CBCE /* BackgroundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		89D0FB262A32F86600D8CBCE /* MyPantryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPantryView.swift; sourceTree = "<group>"; };
 		89D0FB282A32F87E00D8CBCE /* RecipesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesView.swift; sourceTree = "<group>"; };
 		89D0FB2A2A32F88600D8CBCE /* AddRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeView.swift; sourceTree = "<group>"; };
+		89D0FB2F2A3301D900D8CBCE /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 			children = (
 				89D0FB0C2A32D25E00D8CBCE /* RecipeFinderAppApp.swift */,
 				89D0FB0E2A32D25E00D8CBCE /* ContentView.swift */,
+				89D0FB2F2A3301D900D8CBCE /* BackgroundView.swift */,
 				89D0FB262A32F86600D8CBCE /* MyPantryView.swift */,
 				89D0FB282A32F87E00D8CBCE /* RecipesView.swift */,
 				89D0FB2A2A32F88600D8CBCE /* AddRecipeView.swift */,
@@ -170,6 +173,7 @@
 				89D0FB292A32F87E00D8CBCE /* RecipesView.swift in Sources */,
 				89D0FB212A32D4DF00D8CBCE /* RecipeListView.swift in Sources */,
 				89D0FB272A32F86600D8CBCE /* MyPantryView.swift in Sources */,
+				89D0FB302A3301D900D8CBCE /* BackgroundView.swift in Sources */,
 				89D0FB1F2A32D48900D8CBCE /* IngredientInputView.swift in Sources */,
 				89D0FB1D2A32D3F400D8CBCE /* RecipeViewModel.swift in Sources */,
 				89D0FB1B2A32D37C00D8CBCE /* Recipe.swift in Sources */,
