@@ -9,22 +9,39 @@ import SwiftUI
 
 struct IngredientInputView: View {
     @EnvironmentObject var viewModel: RecipeViewModel
-    @State private var ingredient = ""
+    @State private var ingredientName = ""
+    @State private var ingredientQuantity: String = ""
+    @State private var ingredientUnit = ""
 
     var body: some View {
         HStack {
-            TextField("Enter ingredient", text: $ingredient)
+            TextField("Enter ingredient name", text: $ingredientName)
+            TextField("####", text: $ingredientQuantity)
+                .frame(width: 50, height: 50)
+            TextField("Enter unit", text: $ingredientUnit)
             Button(action: {
-                viewModel.userIngredients.append(ingredient)
-                ingredient = ""
-                print(viewModel.userIngredients)  // This will print to console whenever an ingredient is added
+                if let quantity = Double(ingredientQuantity) {
+                    let ingredient = Ingredient(name: ingredientName, quantity: quantity, unit: ingredientUnit)
+                    viewModel.userIngredients.append(ingredient)
+                    ingredientName = ""
+                    ingredientQuantity = ""
+                    ingredientUnit = ""
+                    print(viewModel.userIngredients)  // This will print the userIngredients array to the console
+                 
+                }
             }) {
                 Text("Add")
+                    .foregroundColor(.primary)
+                    .frame(width: 50, height: 50)
+                    .background(Color(.systemMint))
+                    .cornerRadius(10)
+                
             }
-
-        }
+        }.padding(.horizontal, 15)
     }
 }
+
+
 
 
 struct IngredientInputView_Previews: PreviewProvider {
