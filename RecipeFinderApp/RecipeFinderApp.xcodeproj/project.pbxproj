@@ -25,6 +25,7 @@
 		89D0FB342A3384A100D8CBCE /* DetailedRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D0FB332A3384A100D8CBCE /* DetailedRecipeView.swift */; };
 		89D0FB362A33B76200D8CBCE /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D0FB352A33B76200D8CBCE /* MainView.swift */; };
 		89D0FB382A33B78200D8CBCE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D0FB372A33B78200D8CBCE /* HomeView.swift */; };
+		89D0FB3A2A33CB8400D8CBCE /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D0FB392A33CB8400D8CBCE /* Title.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		89D0FB332A3384A100D8CBCE /* DetailedRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedRecipeView.swift; sourceTree = "<group>"; };
 		89D0FB352A33B76200D8CBCE /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		89D0FB372A33B78200D8CBCE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		89D0FB392A33CB8400D8CBCE /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				89D0FB0E2A32D25E00D8CBCE /* ContentView.swift */,
 				89D0FB352A33B76200D8CBCE /* MainView.swift */,
 				89D0FB372A33B78200D8CBCE /* HomeView.swift */,
+				89D0FB392A33CB8400D8CBCE /* Title.swift */,
 				89D0FB2F2A3301D900D8CBCE /* BackgroundView.swift */,
 				89D0FB262A32F86600D8CBCE /* MyPantryView.swift */,
 				89D0FB282A32F87E00D8CBCE /* RecipesView.swift */,
@@ -180,6 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89D0FB232A32DA6B00D8CBCE /* Ingredients.swift in Sources */,
+				89D0FB3A2A33CB8400D8CBCE /* Title.swift in Sources */,
 				89D0FB252A32EDB800D8CBCE /* HomeBottomNav.swift in Sources */,
 				89D0FB2B2A32F88600D8CBCE /* AddRecipeView.swift in Sources */,
 				89D0FB292A32F87E00D8CBCE /* RecipesView.swift in Sources */,

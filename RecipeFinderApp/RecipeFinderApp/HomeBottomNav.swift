@@ -30,7 +30,7 @@ struct HomeBottomNav: View {
                     }.tag(1)
                     .environmentObject(viewModel)
 
-                RecipeListView()
+                RecipesView()
                     .tabItem {
                         Image(systemName: "fork.knife")
                         Text("Recipes")

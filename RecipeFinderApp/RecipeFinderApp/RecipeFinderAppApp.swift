@@ -8,13 +8,10 @@
 import SwiftUI
 
 @main
-struct RecipeFinderAppApp: App {
-    @StateObject private var viewModel = RecipeViewModel()  // Creates a single source of truth
-
+struct RecipeFinderApp: App {
     var body: some Scene {
         WindowGroup {
-            MainView()
-                .environmentObject(viewModel)
+            MainView().environmentObject(RecipeViewModel())
         }
     }
 }

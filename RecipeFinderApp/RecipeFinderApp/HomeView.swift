@@ -15,14 +15,12 @@ struct HomeView: View {
             ZStack {
                 BackgroundView()
                 VStack {
-                    Text("Recipe Finder")
-                        .fontWeight(.bold)
-                        .font(.system(size:50))
-                        .padding(.bottom, 10)
+                    Title(text: "Recipe Finder")
                     IngredientInputView().environmentObject(viewModel)
                     Divider()
                     RecipeListView().environmentObject(viewModel)
                 }.padding(.top, 20)
+                
             }
         }
     }
@@ -30,6 +28,6 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView().environmentObject(RecipeViewModel())
     }
 }

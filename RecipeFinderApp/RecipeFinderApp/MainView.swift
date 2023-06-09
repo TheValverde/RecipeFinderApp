@@ -25,7 +25,7 @@ struct MainView: View {
                     Text("My Pantry")
                 }.tag(1)
 
-            RecipeListView()
+            RecipesView()
                 .tabItem {
                     Image(systemName: "fork.knife")
                     Text("Recipes")
@@ -45,6 +45,6 @@ struct MainView: View {
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        MainView().environmentObject(RecipeViewModel())
     }
 }

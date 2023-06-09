@@ -12,12 +12,15 @@ struct DetailedRecipeView: View {
     var recipe : Recipe
 
     var body: some View {
-        Text(recipe.name)
+        ZStack{
+            BackgroundView()
+            Text(recipe.name)
+        }
     }
 }
 
 struct DetailedRecipeView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailedRecipeView(recipe: Recipe(name: "NB", ingredients: [Ingredient(name: "Cheese", quantity: 1, unit: "Slice")], difficulty: "Easy"))
+        DetailedRecipeView(recipe: Recipe(name: "LOL NERD", ingredients: [Ingredient(name: "Cheese", quantity: 1, unit: "Slice")], difficulty: "Easy"))
     }
 }

@@ -9,7 +9,12 @@ import SwiftUI
 
 struct AddRecipeView: View {
     var body: some View {
-        Text("Add Recipe")
+        
+        ZStack{
+            BackgroundView()
+            
+            Text("Add Recipe")
+        }
     }
 }
 
