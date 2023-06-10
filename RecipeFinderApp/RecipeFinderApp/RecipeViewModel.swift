@@ -11,10 +11,7 @@ import Combine
 class RecipeViewModel: ObservableObject {
     @Published var userIngredients: [Ingredient] = []
     @Published var activeView: ActiveView = .home
-    
-    enum ActiveView { case home, myPantry, recipes, addRecipe, detailedView }
-
-    let recipes: [Recipe] = [
+    @Published var recipes: [Recipe] = [
         Recipe(name: "Pasta", ingredients:
                 [Ingredient(name: "Pasta", quantity: 2, unit: "Cups"),
                 Ingredient(name: "Tomato", quantity: 1, unit: "Whole"),
@@ -41,5 +38,28 @@ class RecipeViewModel: ObservableObject {
                 [Ingredient(name: "Debug", quantity: 1, unit: "Debug")],
                difficulty: "Debug")
     ]
-}
+    
+    enum ActiveView { case home, myPantry, recipes, addRecipe, detailedView }
 
+    func addRecipe(_ recipe: Recipe) {
+        self.recipes.append(recipe)
+    }
+    
+    func addOrUpdateIngredient(_ ingredient: Ingredient) {
+            print("Shit")
+            if let index = userIngredients.firstIndex(where: { $0.name == ingredient.name && $0.unit == ingredient.unit }) {
+                // The ingredient already exists in the list, so add the quantities.
+                userIngredients[index].quantity += ingredient.quantity
+            } else {
+                // The ingredient does not exist in the list, so append it.
+                userIngredients.append(ingredient)
+            }
+        }
+    
+    func removeIngredient(_ ingredient: Ingredient) {
+            if let index = userIngredients.firstIndex(where: { $0.name == ingredient.name && $0.unit == ingredient.unit }) {
+                userIngredients.remove(at: index)
+            }
+        }
+    
+}

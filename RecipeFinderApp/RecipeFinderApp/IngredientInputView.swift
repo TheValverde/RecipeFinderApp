@@ -31,7 +31,7 @@ struct IngredientInputView: View {
             Button(action: {
                 if let quantity = Double(ingredientQuantity) {
                     let ingredient = Ingredient(name: ingredientName, quantity: quantity, unit: ingredientUnit)
-                    viewModel.userIngredients.append(ingredient)
+                    viewModel.addOrUpdateIngredient(ingredient)
                     ingredientName = ""
                     ingredientQuantity = ""
                     ingredientUnit = ""
@@ -44,6 +44,7 @@ struct IngredientInputView: View {
                     .background(Color(.systemMint))
                     .cornerRadius(10)
             }
+
         }.padding(.horizontal, 15)
     }
 }

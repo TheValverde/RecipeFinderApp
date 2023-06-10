@@ -11,20 +11,18 @@ struct HomeView: View {
     @EnvironmentObject var viewModel: RecipeViewModel
     
     var body: some View {
-        NavigationView {
-            ZStack {
-                BackgroundView()
-                VStack {
-                    Title(text: "Recipe Finder")
-                    IngredientInputView().environmentObject(viewModel)
-                    Divider()
-                    RecipeListView().environmentObject(viewModel)
-                }.padding(.top, 20)
-                
-            }
+        ZStack {
+            BackgroundView()
+            VStack {
+                Title(text: "Recipe Finder")
+                IngredientInputView().environmentObject(viewModel)
+                Divider()
+                RecipeListView().environmentObject(viewModel)
+            }.padding(.top, 20)
         }
     }
 }
+
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
