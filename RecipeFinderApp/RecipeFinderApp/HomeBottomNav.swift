@@ -17,7 +17,7 @@ struct HomeBottomNav: View {
 
             // Our main content
             TabView(selection: $selectedTab) {
-                ContentView()
+                HomeView()
                     .tabItem{
                         Image(systemName: "house.fill")
                         Text("Home")
@@ -89,7 +89,7 @@ struct BottomButtonView: View {
         .navigationDestination(isPresented: $isActive) {
             switch activeView {
             case .home:
-                ContentView()
+                HomeView()
             case .myPantry:
                 MyPantryView().environmentObject(viewModel)
             case .recipes:

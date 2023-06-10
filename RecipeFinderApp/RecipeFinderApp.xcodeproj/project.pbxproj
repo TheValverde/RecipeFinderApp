@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		89D0FB0D2A32D25E00D8CBCE /* RecipeFinderAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D0FB0C2A32D25E00D8CBCE /* RecipeFinderAppApp.swift */; };
-		89D0FB0F2A32D25E00D8CBCE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D0FB0E2A32D25E00D8CBCE /* ContentView.swift */; };
 		89D0FB112A32D26000D8CBCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89D0FB102A32D26000D8CBCE /* Assets.xcassets */; };
 		89D0FB142A32D26000D8CBCE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89D0FB132A32D26000D8CBCE /* Preview Assets.xcassets */; };
 		89D0FB1B2A32D37C00D8CBCE /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D0FB1A2A32D37C00D8CBCE /* Recipe.swift */; };
@@ -26,13 +25,11 @@
 		89D0FB362A33B76200D8CBCE /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D0FB352A33B76200D8CBCE /* MainView.swift */; };
 		89D0FB382A33B78200D8CBCE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D0FB372A33B78200D8CBCE /* HomeView.swift */; };
 		89D0FB3A2A33CB8400D8CBCE /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D0FB392A33CB8400D8CBCE /* Title.swift */; };
-		89D0FB3D2A34341B00D8CBCE /* SwipeCellKit in Frameworks */ = {isa = PBXBuildFile; productRef = 89D0FB3C2A34341B00D8CBCE /* SwipeCellKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		89D0FB092A32D25E00D8CBCE /* RecipeFinderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeFinderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89D0FB0C2A32D25E00D8CBCE /* RecipeFinderAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeFinderAppApp.swift; sourceTree = "<group>"; };
-		89D0FB0E2A32D25E00D8CBCE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		89D0FB102A32D26000D8CBCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89D0FB132A32D26000D8CBCE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		89D0FB1A2A32D37C00D8CBCE /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
@@ -57,7 +54,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89D0FB3D2A34341B00D8CBCE /* SwipeCellKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,7 +80,6 @@
 			isa = PBXGroup;
 			children = (
 				89D0FB0C2A32D25E00D8CBCE /* RecipeFinderAppApp.swift */,
-				89D0FB0E2A32D25E00D8CBCE /* ContentView.swift */,
 				89D0FB352A33B76200D8CBCE /* MainView.swift */,
 				89D0FB372A33B78200D8CBCE /* HomeView.swift */,
 				89D0FB392A33CB8400D8CBCE /* Title.swift */,
@@ -131,7 +126,6 @@
 			);
 			name = RecipeFinderApp;
 			packageProductDependencies = (
-				89D0FB3C2A34341B00D8CBCE /* SwipeCellKit */,
 			);
 			productName = RecipeFinderApp;
 			productReference = 89D0FB092A32D25E00D8CBCE /* RecipeFinderApp.app */;
@@ -203,7 +197,6 @@
 				89D0FB1D2A32D3F400D8CBCE /* RecipeViewModel.swift in Sources */,
 				89D0FB1B2A32D37C00D8CBCE /* Recipe.swift in Sources */,
 				89D0FB322A337B8300D8CBCE /* RecipeListItemView.swift in Sources */,
-				89D0FB0F2A32D25E00D8CBCE /* ContentView.swift in Sources */,
 				89D0FB382A33B78200D8CBCE /* HomeView.swift in Sources */,
 				89D0FB362A33B76200D8CBCE /* MainView.swift in Sources */,
 				89D0FB0D2A32D25E00D8CBCE /* RecipeFinderAppApp.swift in Sources */,
@@ -416,14 +409,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		89D0FB3C2A34341B00D8CBCE /* SwipeCellKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 89D0FB3B2A34341B00D8CBCE /* XCRemoteSwiftPackageReference "SwipeCellKit" */;
-			productName = SwipeCellKit;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 89D0FB012A32D25D00D8CBCE /* Project object */;
 }
