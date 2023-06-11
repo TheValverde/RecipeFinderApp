@@ -1,5 +1,5 @@
 import SwiftUI
-import UIKit
+
 
 struct MyPantryView: View {
     @EnvironmentObject var viewModel: RecipeViewModel
@@ -27,15 +27,23 @@ struct MyPantryView: View {
                                 .foregroundColor(.secondary)
                                 
                         }
+                        
                         .padding()
                         .background(Color(.systemGray5))
                         .cornerRadius(10)
                         .listRowBackground(Color.clear)
+                        .swipeActions(edge: .trailing, allowsFullSwipe: true) {
+                            Button(role: .destructive) {
+                                deleteIngredient(at: index)
+                            } label: {
+                                Label("Delete", systemImage: "trash")
+                            }
+                        }
                     }
-                    .onDelete(perform: deleteIngredient)
                     
                 }
                 .listStyle(PlainListStyle())  // to remove list separator lines
+                .padding(.bottom, 50    )
                 .padding(.horizontal)
                 .scrollContentBackground(.hidden)
                 
@@ -46,8 +54,8 @@ struct MyPantryView: View {
         }
     }
     
-    func deleteIngredient(at offsets: IndexSet) {
-        viewModel.userIngredients.remove(atOffsets: offsets)
+    func deleteIngredient(at index: Int) {
+        viewModel.userIngredients.remove(at: index)
     }
 }
 

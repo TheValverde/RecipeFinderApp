@@ -13,37 +13,49 @@ struct MainView: View {
 
     var body: some View {
         NavigationView {
-            TabView(selection: $selectedTab) {
-                HomeView()
-                    .tabItem{
-                        Image(systemName: "house.fill")
-                        Text("Home")
-                    }.tag(0)
-
-                MyPantryView()
-                    .tabItem {
-                        Image(systemName: "takeoutbag.and.cup.and.straw.fill")
-                        Text("My Pantry")
-                    }.tag(1)
-
-                RecipesView()
-                    .tabItem {
-                        Image(systemName: "fork.knife")
-                        Text("Recipes")
-                    }.tag(2)
-
-                AddRecipeView()
-                    .tabItem {
-                        Image(systemName: "plus")
-                        Text("Add Recipe")
-                    }.tag(3)
+            GeometryReader { geometry in
+                ZStack {
+                    VStack {
+                        Spacer()
+                        RoundedRectangle(cornerRadius: 25)
+                            .fill(Color(.systemGray5)) // Or use whatever color you want
+                            .frame(width: geometry.size.width, height: 55)
+                    }
+                    
+                    
+                    TabView(selection: $selectedTab) {
+                        HomeView()
+                            .tabItem{
+                                Image(systemName: "house.fill")
+                                Text("Home")
+                            }.tag(0)
+                        
+                        MyPantryView()
+                            .tabItem {
+                                Image(systemName: "takeoutbag.and.cup.and.straw.fill")
+                                Text("My Pantry")
+                            }.tag(1)
+                        
+                        RecipesView()
+                            .tabItem {
+                            Image(systemName: "fork.knife")
+                            Text("Recipes")
+                        }.tag(2)
+                        
+                        AddRecipeView()
+                            .tabItem {
+                            Image(systemName: "plus")
+                            Text("Add Recipe")
+                        }.tag(3)
+                    }
+                    .accentColor(.black) // The color of selected tab items.
+                    
+                    
+                }
             }
-            .accentColor(.black) // The color of selected tab items.
         }
     }
 }
-
-
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {

@@ -25,8 +25,9 @@ struct RecipesView: View {
                             RecipeListItemView(name: recipe.name, difficulty: recipe.difficulty, destination: AnyView(DetailedRecipeView(recipe: recipe).environmentObject(viewModel)))
                         }
                     }
+                    
                     .padding(.horizontal)
-                }
+                }.padding(.bottom, 45)
             }
         }
     }
