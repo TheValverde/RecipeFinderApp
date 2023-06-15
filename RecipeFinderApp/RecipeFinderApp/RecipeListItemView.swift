@@ -1,5 +1,4 @@
 import SwiftUI
-
 struct RecipeListItemView: View {
     @EnvironmentObject var viewModel: RecipeViewModel
     
@@ -33,12 +32,14 @@ struct RecipeListItemView: View {
                 .background(Color(.systemGray4))
                 .cornerRadius(18)
             }
-            .sheet(isPresented: $showingDetailedView) {
+            .buttonStyle(PlainButtonStyle()) // prevents the blue highlighting
+            .fullScreenCover(isPresented: $showingDetailedView) {
                 destination
             }
         }
     }
-    
+}
+
     struct RecipeListItemView_Previews: PreviewProvider {
         static var previews: some View {
             ZStack{
@@ -54,4 +55,4 @@ struct RecipeListItemView: View {
             }
         }
     }
-}
+

@@ -12,16 +12,15 @@ struct MainView: View {
     @State private var selectedTab = 0
 
     var body: some View {
-        NavigationView {
-            GeometryReader { geometry in
-                ZStack {
+        ZStack {
+            // Use BackgroundView as the global background
+            BackgroundView().edgesIgnoringSafeArea(.all)
+            
+            NavigationView {
+                GeometryReader { geometry in
                     VStack {
                         Spacer()
-                        RoundedRectangle(cornerRadius: 25)
-                            .fill(Color(.systemGray5)) // Or use whatever color you want
-                            .frame(width: geometry.size.width, height: 55)
                     }
-                    
                     
                     TabView(selection: $selectedTab) {
                         HomeView()
@@ -49,8 +48,6 @@ struct MainView: View {
                         }.tag(3)
                     }
                     .accentColor(.black) // The color of selected tab items.
-                    
-                    
                 }
             }
         }

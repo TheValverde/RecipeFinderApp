@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct DetailedRecipeView: View {
+    @Environment(\.presentationMode) var presentationMode
     var recipe : Recipe
 
     var body: some View {
@@ -8,9 +9,19 @@ struct DetailedRecipeView: View {
             BackgroundView()
             ScrollView {
                 VStack(alignment: .leading, spacing: 20) {
-                    Text(recipe.name)
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
+                    HStack {
+                        Text(recipe.name)
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
+                        Spacer()
+                        Button(action: {
+                            presentationMode.wrappedValue.dismiss()
+                        }) {
+                            Image(systemName: "xmark.circle.fill")
+                                .font(.largeTitle)
+                                .foregroundColor(.black)
+                        }
+                    }
                     Text("Difficulty: \(recipe.difficulty)")
                         .font(.title2)
                     Text("Total Calories: \(recipe.calories)")
